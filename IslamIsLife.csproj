@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5C1355D-05EC-4471-A2D8-C7D1C244D0FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IslamIsLife</RootNamespace>
+    <AssemblyName>IslamIsLife</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="IslamIsLife">
+      <HintPath>obj\Debug\IslamIsLife.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Books Forms\ShowManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books Forms\ShowManageBooksForm.Designer.cs">
+      <DependentUpon>ShowManageBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Main And Login Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main And Login Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books Forms\Controls\ctrlBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books Forms\Controls\ctrlBooks.Designer.cs">
+      <DependentUpon>ctrlBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\ShowManagePeopleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People Forms\ShowManagePeopleForm.Designer.cs">
+      <DependentUpon>ShowManagePeopleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\ShowSearchForPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People Forms\ShowSearchForPersonForm.Designer.cs">
+      <DependentUpon>ShowSearchForPersonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers Forms\Controls\ctrlSearchTeacherWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers Forms\Controls\ctrlSearchTeacherWithFilter.Designer.cs">
+      <DependentUpon>ctrlSearchTeacherWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers Forms\Controls\ctrlTeachers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teachers Forms\Controls\ctrlTeachers.Designer.cs">
+      <DependentUpon>ctrlTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers Forms\ShowAddEditeTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers Forms\ShowAddEditeTeacher.Designer.cs">
+      <DependentUpon>ShowAddEditeTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers Forms\ShowSearchTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers Forms\ShowSearchTeacherForm.Designer.cs">
+      <DependentUpon>ShowSearchTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests Forms\Controls\ctrlTests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests Forms\Controls\ctrlTests.Designer.cs">
+      <DependentUpon>ctrlTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main And Login Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main And Login Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main And Login Forms\MainControls\ctrlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main And Login Forms\MainControls\ctrlHome.Designer.cs">
+      <DependentUpon>ctrlHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPeople.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPeople.Designer.cs">
+      <DependentUpon>ctrlPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPersonInfo.Designer.cs">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPersonInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People Forms\Controls\ctrlPersonInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\ShowAddEditePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People Forms\ShowAddEditePerson.Designer.cs">
+      <DependentUpon>ShowAddEditePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People Forms\ShowPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People Forms\ShowPersonInfo.Designer.cs">
+      <DependentUpon>ShowPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teachers Forms\ShowManageTeachersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers Forms\ShowManageTeachersForm.Designer.cs">
+      <DependentUpon>ShowManageTeachersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests Forms\ShowManageTestsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests Forms\ShowManageTestsForm.Designer.cs">
+      <DependentUpon>ShowManageTestsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\ChangeUserPassWordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\ChangeUserPassWordForm.Designer.cs">
+      <DependentUpon>ChangeUserPassWordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\Controls\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users Forms\Controls\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\ShowAddEditeUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\ShowAddEditeUserForm.Designer.cs">
+      <DependentUpon>ShowAddEditeUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\ShowManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\ShowManageUsersForm.Designer.cs">
+      <DependentUpon>ShowManageUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\ShowSearchForUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\ShowSearchForUserForm.Designer.cs">
+      <DependentUpon>ShowSearchForUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\ShowUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\ShowUserInfoForm.Designer.cs">
+      <DependentUpon>ShowUserInfoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Books Forms\ShowManageBooksForm.resx">
+      <DependentUpon>ShowManageBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main And Login Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books Forms\Controls\ctrlBooks.resx">
+      <DependentUpon>ctrlBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\ShowManagePeopleForm.resx">
+      <DependentUpon>ShowManagePeopleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\ShowSearchForPersonForm.resx">
+      <DependentUpon>ShowSearchForPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers Forms\Controls\ctrlSearchTeacherWithFilter.resx">
+      <DependentUpon>ctrlSearchTeacherWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers Forms\Controls\ctrlTeachers.resx">
+      <DependentUpon>ctrlTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers Forms\ShowAddEditeTeacher.resx">
+      <DependentUpon>ShowAddEditeTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers Forms\ShowSearchTeacherForm.resx">
+      <DependentUpon>ShowSearchTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests Forms\Controls\ctrlTests.resx">
+      <DependentUpon>ctrlTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main And Login Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main And Login Forms\MainControls\ctrlHome.resx">
+      <DependentUpon>ctrlHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\Controls\ctrlPeople.resx">
+      <DependentUpon>ctrlPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\Controls\ctrlPersonInfo.resx">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\Controls\ctrlPersonInfoWithFilter.resx">
+      <DependentUpon>ctrlPersonInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\ShowAddEditePerson.resx">
+      <DependentUpon>ShowAddEditePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People Forms\ShowPersonInfo.resx">
+      <DependentUpon>ShowPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Teachers Forms\ShowManageTeachersForm.resx">
+      <DependentUpon>ShowManageTeachersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests Forms\ShowManageTestsForm.resx">
+      <DependentUpon>ShowManageTestsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\ChangeUserPassWordForm.resx">
+      <DependentUpon>ChangeUserPassWordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\Controls\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\ShowAddEditeUserForm.resx">
+      <DependentUpon>ShowAddEditeUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\ShowManageUsersForm.resx">
+      <DependentUpon>ShowManageUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\ShowSearchForUserForm.resx">
+      <DependentUpon>ShowSearchForUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\ShowUserInfoForm.resx">
+      <DependentUpon>ShowUserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IslamIsLife_Buisness\IslamIsLife_Buisness.csproj">
+      <Project>{eeb17e1d-50f0-40b4-96be-56aaeb1715fe}</Project>
+      <Name>IslamIsLife_Buisness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Accessibility">
+      <Guid>{1EA4DBF0-3C3B-11CF-810C-00AA00389B71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
